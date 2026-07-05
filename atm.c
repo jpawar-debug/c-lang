@@ -22,5 +22,8 @@ if(pin==enteredpin){
         printf("please check your account balance.\n",amount);
 
     }
-return 0;
+
+    printf("your all windrol amount is:%d\n",amount);
+printf("your transaction is completed.\n");
+    return 0;
 }
