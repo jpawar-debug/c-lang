@@ -52,4 +52,40 @@ int main() {
         }
         return 0;
     }
+     // 5. Main ATM Operations Menu (Only accessible after successful login)
+    printf("\n--- Welcome Account Holder: %d ---\n", users[user_index].account_no);
     
+    do {
+        printf("\n--- ATM OPERATIONS MENU ---\n");
+        printf("1. Check Balance\n");
+        printf("2. Cash Withdrawal\n");
+        printf("3. Exit\n");
+        printf("Select an option (1-3): ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf(" Current Balance: RS.%.2f\n", users[user_index].balance);
+                break;
+            case 2:
+                printf("Enter amount to withdraw: RS.");
+                scanf("%lf", &withdraw_amount);
+                
+                if (withdraw_amount > users[user_index].balance) {
+                    printf(" Error: Insufficient Balance!\n");
+                } else {
+                    users[user_index].balance -= withdraw_amount;
+                    printf(" RS.%.2f successfully withdrawn!\n", withdraw_amount);
+                    printf("Updated Balance: RS.%.2f\n", users[user_index].balance);
+                }
+                break;
+            case 3:
+                printf(" Thank you for using Secure ATM. Stay Safe!\n");
+                break;
+            default:
+                printf(" Invalid Choice! Please try again.\n");
+        }
+    } while (choice != 3);
+
+    return 0;
+}
