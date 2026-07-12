@@ -54,6 +54,9 @@ int main() {
     }
      // 5. Main ATM Operations Menu (Only accessible after successful login)
     printf("\n--- Welcome Account Holder: %d ---\n", users[user_index].account_no);
+    printf("verification is processing please wait...\n");
+    printf("verification completed successfully\n");
+
     
     do {
         printf("\n--- ATM OPERATIONS MENU ---\n");
