@@ -12,6 +12,8 @@ struct Account {
 };
 
 int main() {
+    printf("welcome to the ATM service\n");
+    printf("please enter your details to access your account\n");
     // 2. Mock Database: Pre-defining 2 user accounts
     struct Account users[2] = {
         {101, 1234, 50000.0, 0, 0},
@@ -89,6 +91,8 @@ int main() {
                 printf(" Invalid Choice! Please try again.\n");
         }
     } while (choice != 3);
+
+
 
     return 0;
 }
